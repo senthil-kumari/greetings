@@ -1,0 +1,36 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  perspective: 1200px;
+}
+
+.card {
+  width: 700px;
+  max-width: 95%;
+  height: 798px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card.open {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-inside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: white;
+}
+
+.card-inside {
+  transform: rotateY(180deg);
+}

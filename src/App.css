@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;500&display=swap');
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffd1ff, #b5fffc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.slider-container {
+  max-width: 650px;
+  width: 90%;
+  text-align: center;
+  padding: 40px;
+  background: #ffffffdd;
+  border-radius: 25px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .slider-container {
+    max-width: 700px;   
+    padding: 60px;     
+  }
+  .quote-box {
+    font-size: 1.6rem; 
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+  }
+  .footer {
+    font-size: 1.75rem;
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+}
+
+.quote-box {
+  min-height: 120px;
+  padding: 20px;
+  font-size: 1.rem;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(106, 0, 245);
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #777;
+  font-family: 'Dancing Script', cursive;
+}
+
+.fade {
+  animation: fadeEffect 1.2s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 500px) {
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
+  .quote-box {
+    font-size: 1.1rem;
+  }
+}
+
+.music-btn {
+  background: #ffffffaa;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: 1px solid #fff;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.music-btn:hover {
+  transform: scale(1.03);
+}
+
+.quote-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.quote-buttons button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.quote-buttons button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.quote-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
